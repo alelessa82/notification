@@ -23,8 +23,8 @@ class Email
         $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
         $this->mail->Username = $user;                              // SMTP username
         $this->mail->Password = $pass;                              // SMTP password
-        $this->mail->SMTPSecure = $stmpSecure;                      // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $this->mail->Port = $port;                                  // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $this->mail->SMTPSecure = $stmpSecure;                      // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged  / ENCRYPTION_STARTTLS for 587
+        $this->mail->Port = $port;                                  // TCP port to connect to,  use 587  for `PHPMailer::ENCRYPTION_STARTTLS` or 465 for `PHPMailer::ENCRYPTION_SMTPS` above
         $this->mail->CharSet = 'utf-8';
         $this->mail->setLanguage('br');
         $this->mail->isHTML(true);
